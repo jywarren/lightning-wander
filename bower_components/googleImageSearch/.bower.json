@@ -1,0 +1,13 @@
+{
+  "name": "googleImageSearch",
+  "homepage": "https://github.com/HondaDai/GoogleImageSearch.js",
+  "_release": "2ad4ae1848",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "2ad4ae18484a2967903a5b7875899326bb840c86"
+  },
+  "_source": "git://github.com/HondaDai/GoogleImageSearch.js.git",
+  "_target": "*",
+  "_originalSource": "HondaDai/GoogleImageSearch.js"
+}
