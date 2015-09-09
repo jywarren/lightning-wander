@@ -16,6 +16,11 @@ if (annyang) {
 
   // Let's define a command.
   var commands = {
+    "(anything) *term": onCommand
+/*    "let's look at *term": onCommand,
+    "this is a *term": onCommand,
+    "and *term": onCommand,
+    "or *term": onCommand,
     "are *term": onCommand,
     "is *term": onCommand,
     "was *term": onCommand,
@@ -29,13 +34,15 @@ if (annyang) {
     "from *term": onCommand,
     "in *term": onCommand,
     "of *term": onCommand
+*/
   };
 
   // Add our commands to annyang
   annyang.addCommands(commands);
 
   // Start listening.
-  annyang.start();
+  annyang.start({continuous: true});
+  annyang.debug();
 
   console.log('start');
 
