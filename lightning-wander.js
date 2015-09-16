@@ -2,6 +2,17 @@ jQuery(document).ready(function($) {
 
 var onCommand = function(term) {
 
+  var words = term.split(' ');
+  if (words.length > 5) {
+
+    while (words.length > 5) {
+      words.shift();
+    }
+
+    term = words.join(' ');
+
+  }
+
   $('h1').html(term);
 
   new GoogleImageSearch(term).done(function (data) {
@@ -41,12 +52,17 @@ if (annyang) {
   annyang.addCommands(commands);
 
   // Start listening.
-  annyang.start({continuous: true});
+  annyang.start({
+    continuous:  true,
+    autoRestart: true
+  });
   annyang.debug();
 
   console.log('start');
 
 }
+
+setInterval(function() { window.location = window.location; }, 100000);
 
 });
 
